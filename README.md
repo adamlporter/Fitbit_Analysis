@@ -13,6 +13,7 @@ sleepSummary_datetime.csv -- the daily summary of sleep information<p>
   
 <b>StepDataToCSV</b> reads the FB data and processes all the step-YYYY-MM-DD.json files. It changes the dateTime field into a UTC DT field and adds column for localDT information. It outputs this information into:<p>
 StepData_datetime.csv<br>
+
 Note: FB records steps every few seconds, so one json file (with a month of data) will have about 19K records. When I processed 9 months of data, I ended up with a dataframe with 185K rows.
 
 To come: examples of analysis of this data.
