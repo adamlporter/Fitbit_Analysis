@@ -120,7 +120,7 @@ for fname in sleepFiles:
 sleepLog = pd.concat(monthLogs)
 
 date = time.strftime("%y%m%d"+"_"+"%H%M")
-defaultFN = 'SleepLog_'+date
+
 print('Files will be saved to directory with Fitbit datafiles with the following names:')
 print('sleepLog_' + date + '.csv')
 print('sleepSummary_' + date + '.csv')
