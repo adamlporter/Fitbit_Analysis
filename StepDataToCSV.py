@@ -44,22 +44,3 @@ print('stepData_' + date + '.csv')
   
 stepData.to_csv(path_or_buf = workd + 'stepData_' + date + '.csv',index=False)
 
-'''
-
-dailySummary = rawSteps.groupby(rawSteps['dateTime'].dt.dayofyear).sum()
-hourlySummary
-
-# add DOY to allow analysis (not needed?)
-rawSteps['doy'] = rawSteps['dateTime'].dt.dayofyear
-
-# visualizations
-import seaborn as sns
-sns.set(style='whitegrid')
-
-ax = sns.barplot(y=rawSteps['value'],x=rawSteps['dateTime'].dt.dayofyear)
-ax = sns.barplot(y=rawSteps['value'],x=rawSteps['dateTime'].dt.hour)
-
-ax = sns.barplot(y=rawSteps['value'],
-                  x=rawSteps['localDT'].dt.dayofyear).
-                  set(xticks=())
-'''

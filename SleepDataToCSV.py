@@ -36,8 +36,8 @@ def dailySleepLog(idx,data_row):
     log_temp_df['deltaMin'] = log_temp_df['deltaT'].apply(lambda x: x.seconds/60)
     # create numeric value for sleep levels;this allows for combination of 
     # 'stages' and 'classic' data sets
-    levelNums = {'awake':7,'restless':8,'asleep':9, # classic
-                 'wake':1, 'light':2,'rem':3,'deep':4, # stages
+    levelNums = {'awake':7,'restless':2,'asleep':9, # classic
+                 'wake':1, 'light':3,'rem':2,'deep':4, # stages
                  'unknown':-1}
     log_temp_df['levelN'] = log_temp_df['level'].apply(lambda x: levelNums[x])   
     return(log_temp_df)
