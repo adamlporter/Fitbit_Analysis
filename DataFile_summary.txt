@@ -1,0 +1,74 @@
+Fitbit Data files
+
+SimpleFilesToCSV.py
+    altitude
+    calories
+    distance
+    steps
+    sedentary_minutes
+    lightly_active_minutes
+    moderately_active_minutes
+    very_active_minutes
+
+SleepDataToCSV.py
+    sleep
+
+HRLogToCSV.py
+    hear_rate
+
+HRZ_ToCSV.py
+    time_in_heart_rate_zones
+
+=========================================================
+MULTIPLE READINGS PER DAY
+    altitude - dateTime stored in local    
+    calories - dateTime stored in local time
+    distance - dateTime stored in UTC
+    steps - datetime in UTC
+        The files above have a simple JSON data structure, storing two values:
+            dateTime - multiple readings per day
+            value
+
+    heart-rate - datetime in UTC
+        HR is reported every 5-10 seconds (LOTS of data)
+            dateTime - sorted in UTC
+            value
+                bpm
+                confidence (0-low, 3 = highest)
+
+SINGLE READING PER DAY
+    lightly_active_minutes
+    moderately_active_minutes
+    sedentary_minutes
+    very_active_minutes
+        The files above have a simple JSON data structure, storing two values:
+            dateTime - one daily reading
+            value
+
+    time_in_heart_zones
+        Daily summary of minutes in each HRZ
+            dateTime
+            value
+                < zone 1
+                zone 1
+                zone 2
+                zone 3
+
+OTHER
+    sleep
+        Complex, with both daily summary and log data
+
+
+
+======
+TO DO:
+Process
+    exercise
+
+
+
+
+
+
+
+
