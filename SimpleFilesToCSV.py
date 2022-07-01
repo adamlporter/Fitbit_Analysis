@@ -52,7 +52,7 @@ dataTypes = ['altitude','calories','distance','steps',
 UTC = ['steps','distance']
 d = {}
 print('Files will be saved to directory with Fitbit datafiles with the following name:')
-print('Processing:')
+print('Processing:') 
 
 for dt in dataTypes:
     dataFiles = glob.glob(workd+dt+'*.json')
